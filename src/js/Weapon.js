@@ -3,7 +3,7 @@ export default class Weapon {
     this.minDamage = minDamage;
     this.maxDamage = maxDamage;
     this.accuracy = accuracy;
-    // this.name = name;
+    this.name = name;
   }
 }
 
