@@ -9,4 +9,9 @@ describe("Weapon", () => {
     expect(newWeapon.accuracy).toEqual(15);
   });
 
+  test("should return an object with a key name that holds string value", () => {
+    let halberd = new Weapon(10, 30, 0, "halberd");
+    expect(halberd.name).toEqual("halberd");
+  });
+
 });
