@@ -17,3 +17,14 @@ export default class Player {
 
 // Strength multiplier: .05 x strength + 1
 
+
+// random number 1-100
+
+// number > 80 = hit
+
+// player accuracy 0
+
+// weapon accuracy 20
+
+// 56
+// 96 = hit
