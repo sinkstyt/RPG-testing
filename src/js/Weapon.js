@@ -7,6 +7,10 @@ export default class Weapon {
   }
 }
 
+// newPlayer.attack(halberd) 
+
+
+
 
 // Strength: 20
 
