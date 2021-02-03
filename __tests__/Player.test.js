@@ -8,7 +8,7 @@ describe("Player", () => {
   });
     
   test("should correctly assign a name passed in as a string at key 'name' ", () => {
-    expect(newPlayer.name).toEqual("Matthew");
+    expect(newPlayer.name).toEqual("Frank");
   });
 
   test("should correctly assign a health key with a value of 100", () => {
