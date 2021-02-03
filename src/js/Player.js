@@ -11,7 +11,7 @@ export default class Player {
   }
 
   attack(weapon) {
-    
+    return this.randomRoll(weapon.minDamage, weapon.maxDamage);
   }
 }
 
