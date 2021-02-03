@@ -6,12 +6,14 @@ export default class Player {
     this.accuracy = 0;
   }
 
-  damageRoll(num1, num2) {
-
-
-
+  damageRoll(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 }
+
+
+
+
 
 // function (name) {
 //   return "hi " + name;
