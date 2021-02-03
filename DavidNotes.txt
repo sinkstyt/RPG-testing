@@ -1,0 +1,112 @@
+npm init -y
+	package.json
+
+npm install webpack@4.39.3 --save-dev --save-exact
+	install webpack
+
+npm install webpack-cli@3.3.8 --save-dev
+	This package will allow us to use webpack from the command line
+
+npm prune
+	Removes depends that are not in package.json
+
+npm install style-loader@1.0.0 css-loader@3.2.0 --save-dev
+	css bundler
+
+$ npm install html-webpack-plugin@3.2.0 --save-dev
+	html bundler
+
+$ npm install clean-webpack-plugin@3.0.0 --save-dev
+	webpack cleanup
+$ npm install webpack-dev-server@3.8.0 --save-dev
+
+$ npm install eslint@6.3.0 --save-dev
+
+$ npm install eslint-loader@3.0.0 --save-dev
+
+
+
+npm install jest@24.9.0 --save-dev
+	loader for jest
+
+Next, we'll need to install a specific Babel plugin that will transform ES6 module syntax:
+
+npm install @babel/core@7.6.4 --save-dev
+npm install @babel/plugin-transform-modules-commonjs@7.6.0 --save-dev
+
+
+
+////////////////////
+
+"scripts": {
+    "build": "webpack --mode development",
+    "start": "npm run build; webpack-dev-server --open --mode development",
+    "lint": "eslint src/*.js",
+    "test": "jest"
+}
+
+///////////////////
+
+
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
+module.exports = {
+  entry: './src/main.js',
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist')
+  },
+  devtool: 'eval-source-map',  
+  devServer: {                 
+    contentBase: './dist'      
+  },
+  plugins: [
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      title: 'Document',
+      template: './src/index.html',
+      inject: 'body'
+    })
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      }, 
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader"
+      }
+    ]
+  }
+};
+
+	
+/// .gitignore_global
+$ cd ~
+
+$ touch .gitignore_global
+
+$ code .gitignore_global
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+node_modules/
+.DS_Store
+dist/
+
+$ git config --global core.excludesfile ~/.gitignore_global
