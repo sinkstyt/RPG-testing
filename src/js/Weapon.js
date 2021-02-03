@@ -1,8 +1,8 @@
 export default class Weapon {
   constructor(minDamage, maxDamage, accuracy) {
-    // this.minDamage = minDamage;
-    // this.maxDamage = maxDamage;
-    // this.accuracy = accuracy;
+    this.minDamage = minDamage;
+    this.maxDamage = maxDamage;
+    this.accuracy = accuracy;
   }
 }
 
