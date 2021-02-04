@@ -31,5 +31,5 @@ export default class Weapon {
 
 // weapon accuracy 20
 
-// 56
+// 56 // miss
 // 96 = hit

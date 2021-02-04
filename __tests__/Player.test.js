@@ -60,10 +60,6 @@ describe("Player", () => {
     expect(newPlayer.level).toEqual(0);
   });
 
-  test("should return an instance of Player with a 'xp' key assigned with a value of 100", () => {
-    expect(newPlayer.xp).toEqual(100);
-  })
-
   test("should allow method levelUp to increase strength by 1", () => {
     newPlayer.levelUp();
     expect(newPlayer.strength).toEqual(1);
