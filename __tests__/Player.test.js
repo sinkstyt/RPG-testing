@@ -79,4 +79,9 @@ describe("Player", () => {
     expect(newPlayer.accuracy).toEqual(1);
     })
 
+    test("should return an instance of Player with keys 'xp' and 'xpToLevel' assigned 0 and 100 respectively", () => {
+      expect(newPlayer.xp).toEqual(0);
+      expect(newPlayer.xpToLevel).toEqual(100);
+    })
+
 });

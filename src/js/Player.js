@@ -2,7 +2,8 @@ export default class Player {
   constructor(name) {
     this.name = name;
     this.level = 0;
-    this.xp = 100;
+    // this.xpToLevel = 100;
+    // this.xp = 0;
     this.health = 100;
     this.strength = 0;
     this.accuracy = 0;
@@ -34,8 +35,30 @@ export default class Player {
     this.strength++;
     this.health += 10;
     this.accuracy++;
+    // this.xpToLevel + 100;
+    // whileLoop();
   }
 }
+
+
+
+
+// constructor(name) {
+//   this.name = name;
+//   this.level = 0;
+//   this.xpToLevel = 100;
+//   this.xp = 5000;
+//   this.health = 100;
+//   this.strength = 0;
+//   this.accuracy = 0;
+// }
+
+// while
+//   (this.xp >= this.xpToLevel) {
+//     this.levelUp();
+//   }
+
+
 
 // random number 0-100
 
