@@ -20,7 +20,7 @@ export default class Player {
   }
 
   isHit() {
-
+    return false;
   }
 }
 
