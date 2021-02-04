@@ -31,7 +31,7 @@ export default class Player {
   }
 
   levelUp() {
-    
+    this.strength++;
   }
 }
 
