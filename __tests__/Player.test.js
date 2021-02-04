@@ -64,14 +64,19 @@ describe("Player", () => {
     expect(newPlayer.xp).toEqual(100);
   })
 
-    test("should allow method levelUp to increase strength by 1", () => {
-      newPlayer.levelUp();
-      expect(newPlayer.strength).toEqual(1);
-    })
+  test("should allow method levelUp to increase strength by 1", () => {
+    newPlayer.levelUp();
+    expect(newPlayer.strength).toEqual(1);
+  })
 
-    test("should allow method levelUp to increase health by 10", () => {
-      newPlayer.levelUp();
-      expect(newPlayer.health).toEqual(110);
+  test("should allow method levelUp to increase health by 10", () => {
+    newPlayer.levelUp();
+    expect(newPlayer.health).toEqual(110);
+  })
+
+    test("should increment accuracy on Player instance by 1", () => {
+    newPlayer.levelUp();
+    expect(newPlayer.accuracy).toEqual(1);
     })
 
 });
