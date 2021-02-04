@@ -19,12 +19,26 @@ export default class Player {
     return this.randomRoll(combinedAccuracy, 100);
   }
 
-  isHit() {
-    return false;
+  isHit(weapon) {
+    const accuracyResult = this.attackAccuracy(weapon);
+    if (accuracyResult > 80) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
 
+// random number 0-100
 
+// number > 80 = hit
+
+// player accuracy 0
+
+// weapon accuracy 20
+
+// 56
+// 96 = hit
 
 
 
