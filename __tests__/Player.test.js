@@ -35,7 +35,12 @@ describe("Player", () => {
   });
 
   test("should correctly return the amount of damage applied given a weapon as an argument", () => {
-    expect(newPlayer.attack(halberd)).toBeGreaterThanOrEqual(10);
-    expect(newPlayer.attack(halberd)).toBeLessThanOrEqual(40);
+    expect(newPlayer.attackDamage(halberd)).toBeGreaterThanOrEqual(10);
+    expect(newPlayer.attackDamage(halberd)).toBeLessThanOrEqual(40);
+  });
+
+  test("should correctly return a value used to check accuracy given a weapon as an argument", () => {
+    expect(newPlayer.attackAccuracy(halberd)).toBeGreaterThanOrEqual(0);
+    expect(newPlayer.attackAccuracy(halberd)).toBeLessThanOrEqual(100);
   });
 });

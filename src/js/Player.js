@@ -10,8 +10,13 @@ export default class Player {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-  attack(weapon) {
+  attackDamage(weapon) {
     return this.randomRoll(weapon.minDamage, weapon.maxDamage);
+  }
+
+  attackAccuracy(weapon) {
+
+
   }
 }
 
