@@ -5,11 +5,13 @@ describe("Player", () => {
   let newPlayer;
   let halberd;
   let sword;
+  let bullseye;
 
   beforeEach(() => {
     newPlayer = new Player("Frank");
     halberd = new Weapon(10, 40, 0, "halberd");
     sword = new Weapon(5, 20, 15, "sword");
+    bullseye = new Weapon(50, 100, 80, "bullseye");
   });
     
   test("should correctly assign a name passed in as a string at key 'name' ", () => {
@@ -47,7 +49,15 @@ describe("Player", () => {
   });
 
   test("should return a boolean", () => {
-    expect(typeof newPlayer.isHit()).toEqual("boolean");
+    expect(typeof newPlayer.isHit(bullseye)).toEqual("boolean");
+  });
+
+  test("should return true if the number is greater than 80", () => {
+    expect(newPlayer.isHit(bullseye)).toEqual(true);
+  });
+
+  test("should return an instance of Player with a 'level' key assigned the value 0", () => {
+    expect(newPlayer.level).toEqual(0);
   });
 
 });
