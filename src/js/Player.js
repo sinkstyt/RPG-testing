@@ -33,6 +33,7 @@ export default class Player {
   levelUp() {
     this.strength++;
     this.health += 10;
+    this.accuracy++;
   }
 }
 
