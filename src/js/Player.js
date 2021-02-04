@@ -29,6 +29,10 @@ export default class Player {
       return false;
     }
   }
+
+  levelUp() {
+    
+  }
 }
 
 // random number 0-100

@@ -64,4 +64,9 @@ describe("Player", () => {
     expect(newPlayer.xp).toEqual(100);
   })
 
+    test("should allow method levelUp to increase strength by 1", () => {
+      newPlayer.levelUp();
+      expect(newPlayer.strength).toEqual(1);
+    })
+
 });
