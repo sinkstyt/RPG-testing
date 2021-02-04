@@ -15,8 +15,8 @@ export default class Player {
   }
 
   attackAccuracy(weapon) {
-
-
+    const combinedAccuracy = weapon.accuracy + this.accuracy;
+    return this.randomRoll(combinedAccuracy, 100);
   }
 }
 

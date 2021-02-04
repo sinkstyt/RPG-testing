@@ -23,7 +23,7 @@ export default class Weapon {
 // Strength multiplier: .05 x strength + 1
 
 
-// random number 1-100
+// random number 0-100
 
 // number > 80 = hit
 

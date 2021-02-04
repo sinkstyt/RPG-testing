@@ -4,10 +4,12 @@ import Weapon from '../src/js/Weapon.js';
 describe("Player", () => {
   let newPlayer;
   let halberd;
+  let sword;
 
   beforeEach(() => {
     newPlayer = new Player("Frank");
     halberd = new Weapon(10, 40, 0, "halberd");
+    sword = new Weapon(5, 20, 15, "sword");
   });
     
   test("should correctly assign a name passed in as a string at key 'name' ", () => {
@@ -40,7 +42,7 @@ describe("Player", () => {
   });
 
   test("should correctly return a value used to check accuracy given a weapon as an argument", () => {
-    expect(newPlayer.attackAccuracy(halberd)).toBeGreaterThanOrEqual(0);
-    expect(newPlayer.attackAccuracy(halberd)).toBeLessThanOrEqual(100);
+    expect(newPlayer.attackAccuracy(sword)).toBeGreaterThanOrEqual(15);
+    expect(newPlayer.attackAccuracy(sword)).toBeLessThanOrEqual(100);
   });
 });
