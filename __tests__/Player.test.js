@@ -45,4 +45,9 @@ describe("Player", () => {
     expect(newPlayer.attackAccuracy(sword)).toBeGreaterThanOrEqual(15);
     expect(newPlayer.attackAccuracy(sword)).toBeLessThanOrEqual(100);
   });
+
+  test("should return a boolean", () => {
+    expect(typeof newPlayer.isHit()).toEqual("boolean");
+  });
+
 });

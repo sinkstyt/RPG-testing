@@ -18,6 +18,10 @@ export default class Player {
     const combinedAccuracy = weapon.accuracy + this.accuracy;
     return this.randomRoll(combinedAccuracy, 100);
   }
+
+  isHit() {
+
+  }
 }
 
 
