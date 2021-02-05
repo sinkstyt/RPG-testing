@@ -1,6 +1,7 @@
 # RPG Test of Champions
 
-### _A quick and dirty RPG to allow authors to tinker with Test Driven Development using Jest_
+### _A quick and dirty RPG envisioned to run in the console_
+_created to allow authors to tinker with Test Driven Development using Jest_
 
 ### By _**Mike Pingel, Matthew Folery, and Tyler Sinks**_
 _initially created 3 February, 2021_
@@ -14,24 +15,26 @@ _last major revision 4 February, 2021_
 
 ## Description
 * a role playing game (RPG)
-* tracks player and enemy health and other stats
+* tracks player and enemy stats (egs. health, accuracy, name, etc.)
 * there may also be other factors that influence enemy encounters:
 > armor
 > weaponry
+* there is no user interface built for this one yet
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+## Setup This Project Locally on Your Machine &mdash; **Installation Instructions**
 
-## Setup/Installation Requirements
-
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
-
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this application depends on? We recommend deleting the project from your desktop, re-cloning the project from GitHub, and writing down all the steps necessary to get the project working again.}_
+* Copy the following link to your clipboard: https://github.com/sinkstyt/RPG-testing.git
+* Open a Bash Terminal (aka command line)
+* In your terminal window, navigate to a directory that you will hold your clone of this project
+* Within your git bash terminal type in 'git clone' and then paste in the link from your clipboard by right clicking and selecting 'paste' example below:
+```at Terminal promt
+YOUR_COMPUTER/Users/yourUserName/rpg-folder $ git clone https://github.com/
+```
+* After the page has been cloned to your chosen directory, locate the folder and open it.
+* After you have the folder open that you have just cloned, launch all the files in your text editor of choice (such as VS Code, Atom, Sublime, VIM, etc.)
 
 ## Specs
+_predominantly brainstorming before writing any tests:_
 
 **Player class**
 * choose player type at start
@@ -59,30 +62,26 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 **Item class**
 * armor
 * weapon
+* Weapon does damage range, stats could modify range
 * money?
 * food?
 * magic seeing stones so you can start your own religion
 
-Health
-
-Strength could do more damage with a weapon
-Vitality could mean more health
-
-Weapon does damage range, stats could modify range
-
-for example, a crappy sword could do 1-10 damage, having a strength of 5 could add 5 to the damage roll or add 5 to the lower number of the range like 6-10
-
-Armor could modify the damage received by a percentage
+**Health**
+* Strength could do more damage with a weapon
+* Vitality could mean more health
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* _No functioning user interface_
+* _Event class has not yet been begun_
+If you run into any issues or have questions, ideas or concerns, please contact an author and/or contribute freely to the code.
 
 ## License
 _MIT 2.0_
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
 
 ## Contact Information
 
-_{Add your contact information here.}_
+_Tyler Sinks &mdash; tyler.sinks@gmail.com_
+_Michael Pingel &mdash; mdpingel@gmail.com_
+_Matthew Foley &mdash; mattfoley0375@gmail.com_
