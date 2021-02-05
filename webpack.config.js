@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
   entry: './src/main.js',
@@ -14,6 +15,7 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
+    new ESLintPlugin(options),
     new HtmlWebpackPlugin({
       title: 'testing-RPG',
       template: './src/index.html',
@@ -29,11 +31,6 @@ module.exports = {
           'css-loader'
         ]
       },
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: "eslint-loader"
-      }
     ]
   }
 };
